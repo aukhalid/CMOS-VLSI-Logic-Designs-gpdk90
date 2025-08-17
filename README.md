@@ -174,7 +174,7 @@ The simulation confirmed that when the input `A` is low, the output `Y` is high,
 
 Transient analysis confirmed that the output `Y` is low only when both inputs `A` and `B` are high.
 
- ![Inverter Schematic](Images/khalid_nand_sy.png)
+ ![Inverter Schematic](Images/khalid_nand_sim.png)
 
 ---
 
@@ -283,16 +283,21 @@ The simulation results matched the NOR gate's truth table, validating the design
 
 **Schematic Diagram:**
 
+![Inverter Schematic](Images/khalid_or_sc.png)
 
 **Layout:**
 
+![Inverter Schematic](Images/khalid_or_la.png)
 
 **Symbol:**
 
+![Inverter Schematic](Images/khalid_or_sy.png)
 
 **Simulation & Verification:**
 
 The simulation successfully validated the OR gate's operation.
+
+![Inverter Schematic](Images/khalid_or_sim.png)
 
 ---
 
@@ -306,6 +311,8 @@ The simulation successfully validated the OR gate's operation.
 
 In the layout, this layer encloses all PMOS transistors and is connected to VDD via a P-type tap.
 
+![Inverter Schematic](Images/M1_NWELL.png)
+
 ### M1_PSUB
 
 **Objective:** To understand the purpose and physical representation of the P-Substrate layer.
@@ -313,6 +320,8 @@ In the layout, this layer encloses all PMOS transistors and is connected to VDD 
 **Description:** The **M1_PSUB** layer represents the connection to the P-Substrate, the bulk silicon wafer. It provides a stable body potential for NMOS transistors, which are built directly on the substrate. This layer must be connected to the lowest potential (GND) to prevent latch-up.
 
 **Layout:**
+
+![Inverter Schematic](Images/M1_PSUB.png)
 
 In the layout, this layer is represented by a specific contact that ties a metal layer to the P-Substrate, typically connected to GND via N-type taps.
 
@@ -344,19 +353,22 @@ Each entry in this section is also presented with the same format as the standar
 
 **Schematic Diagram:**
 
+![Inverter Schematic](Images/khalid_ha_sc.png)
 
 **Layout:**
 
+![Inverter Schematic](Images/khalid_ha_la.png)
 
 **Symbol:**
 
-
-[Image of Half Adder Symbol]
+![Inverter Schematic](Images/khalid_ha_sy.png)
 
 
 **Simulation & Verification:**
 
 The simulation confirmed that the circuit correctly performs 1-bit binary addition.
+
+![Inverter Schematic](Images/khalid_ha_sim.png)
 
 ---
 
@@ -387,16 +399,21 @@ The simulation confirmed that the circuit correctly performs 1-bit binary additi
 
 **Schematic Diagram:**
 
+![Inverter Schematic](Images/khalid_fa_sc.png)
 
 **Layout:**
 
+![Inverter Schematic](Images/khalid_fa_la.png)
 
 **Symbol:**
 
+![Inverter Schematic](Images/khalid_fa_sy.png)
 
 **Simulation & Verification:**
 
 The simulation results validated that the full adder correctly performed 1-bit binary addition with a carry-in.
+
+![Inverter Schematic](Images/khalid_fa_sim.png)
 
 ---
 
@@ -422,16 +439,23 @@ The simulation results validated that the full adder correctly performed 1-bit b
 
 **Schematic Diagram:**
 
+![Inverter Schematic](Images/khalid_demux1x2_sc.png)
 
 **Layout:**
 
+![Inverter Schematic](Images/khalid_demux1x2_la.png)
+
 
 **Symbol:**
+
+![Inverter Schematic](Images/khalid_demux1x2_sy.png)
 
 
 **Simulation & Verification:**
 
 The simulation confirmed that the circuit performed the demultiplexing operation as intended.
+
+![Inverter Schematic](Images/khalid_demux1x2_sim.png)
 
 ---
 
