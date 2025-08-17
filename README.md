@@ -459,6 +459,8 @@ The simulation confirmed that the circuit performed the demultiplexing operation
 
 ---
 
+<a id="1-x-8-de-multiplexer"></a>
+
 ### 1x8 De-Multiplexer
 
 **Objective:**
