@@ -327,9 +327,20 @@ In the layout, this layer is represented by a specific contact that ties a metal
 
 ---
 
+<a id="digital-blocks-and-systems"></a>
+
 ## Digital Blocks and Systems
 
-Each entry in this section is also presented with the same format as the standard cells, demonstrating the hierarchical design approach.
+Each entry in this section is also presented with the same format as the standard cells, demonstrating the hierarchical design approach. And the following format:
+
+- **Objective:** The goal of the design.
+- **Description:** A brief overview of the circuit's function and implementation.
+- **Design Steps:** A step-by-step guide to the design process.
+- **Schematic Diagram:** The transistor-level schematic.
+- **Layout:** The physical representation of the circuit.
+- **Symbol:** The hierarchical symbol.
+- **Simulation & Verification:** The simulation results and a truth table.
+
 
 ### Half Adder (with NAND Gates)
 
