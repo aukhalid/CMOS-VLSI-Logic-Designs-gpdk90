@@ -119,16 +119,21 @@ Each standard cell entry is presented with the following format:
 
 **Schematic Diagram:**
 
+ ![Inverter Schematic](Images/khalid_inv_sc.png)
 
 **Layout:**
 
+![Inverter Layout](Images/khalid_inv_la.png)
 
 **Symbol:**
 
+![Inverter Symbol](Images/khalid_inv_sy.png)
 
 **Simulation & Verification:**
 
 The simulation confirmed that when the input `A` is low, the output `Y` is high, and vice versa.
+
+![Inverter Simulation](Images/khalid_inv_sim.png)
 
 ---
 
