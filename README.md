@@ -7,9 +7,6 @@
 
 This project presents the design and implementation of fundamental digital logic gates, a complete set of CMOS standard cells, and digital system designs using **Cadence Virtuoso** with the **gpdk90** open-source PDK. Each cell and system has been designed from a transistor-level perspective, following a comprehensive VLSI design flow.
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/12101375/133129188-51f7d5c7-1d12-4f3b-8d1e-2d2c12574e4c.png" alt="VLSI Design Flow Diagram">
-</p>
 
 ---
 
@@ -26,7 +23,6 @@ This project presents the design and implementation of fundamental digital logic
 ## 📝 Table of Contents
 
 - [Project Overview](#project-overview)
-- [VLSI Design Flow](#vlsi-design-flow)
 - [Tools and Technology](#tools-and-technology)
 - [Project Structure](#project-structure)
 - [Standard Cells](#standard-cells)
