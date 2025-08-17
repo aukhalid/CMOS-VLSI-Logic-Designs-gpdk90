@@ -10,7 +10,7 @@ This project presents the design and implementation of fundamental digital logic
 
 ---
 
-## 👨‍💻 Presented By
+## Presented By
 
 - **Name:** Ahasan Ullah Khalid
 - **Institution:** Chittagong University of Engineering and Technology (CUET)
@@ -20,7 +20,7 @@ This project presents the design and implementation of fundamental digital logic
 
 ---
 
-## 📝 Table of Contents
+## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Tools and Technology](#tools-and-technology)
@@ -160,16 +160,21 @@ The simulation confirmed that when the input `A` is low, the output `Y` is high,
 
 **Schematic Diagram:**
 
+ ![Inverter Schematic](Images/khalid_nand_sc.png)
 
 **Layout:**
 
+ ![Inverter Schematic](Images/khalid_nand_la.png)
 
 **Symbol:**
 
+ ![Inverter Schematic](Images/khalid_nand_sy.png)
 
 **Simulation & Verification:**
 
 Transient analysis confirmed that the output `Y` is low only when both inputs `A` and `B` are high.
+
+ ![Inverter Schematic](Images/khalid_nand_sy.png)
 
 ---
 
@@ -196,16 +201,21 @@ Transient analysis confirmed that the output `Y` is low only when both inputs `A
 
 **Schematic Diagram:**
 
+ ![Inverter Schematic](Images/khalid_and_sc.png)
 
 **Layout:**
 
+ ![Inverter Schematic](Images/khalid_and_la.png)
 
 **Symbol:**
 
+ ![Inverter Schematic](Images/khalid_and_sy.png)
 
 **Simulation & Verification:**
 
 The simulation confirmed that the circuit performs the AND function correctly.
+
+ ![Inverter Schematic](Images/khalid_and_sim.png)
 
 ---
 
@@ -232,16 +242,21 @@ The simulation confirmed that the circuit performs the AND function correctly.
 
 **Schematic Diagram:**
 
+ ![Inverter Schematic](Images/khalid_nor_sc.png)
 
 **Symbol:**
 
+![Inverter Schematic](Images/khalid_nor_sy.png)
 
 **Layout:**
 
+![Inverter Schematic](Images/khalid_nor_la.png)
 
 **Simulation & Verification:**
 
 The simulation results matched the NOR gate's truth table, validating the design.
+
+![Inverter Schematic](Images/khalid_nor_sim.png)
 
 ---
 
