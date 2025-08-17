@@ -459,13 +459,81 @@ The simulation confirmed that the circuit performed the demultiplexing operation
 
 ---
 
-### 1 x 8 De-Multiplexer
+### 1x8 Demultiplexer Design
 
-**Objective:** To design a 1-to-8 demultiplexer (DEMUX) using a hierarchical approach, building it entirely from pre-existing 1x2 demultiplexer standard cells.
+**Objective:**
 
-**Description:** A 1x8 DEMUX routes a single data input (`D`) to one of eight outputs (`Y0` to `Y7`) based on the value of three select lines (`S0`, `S1`, `S2`). This circuit is built by cascading seven 1x2 DEMUX units in a three-stage tree structure.
+The objective is to design, implement, and verify a 1-to-8 demultiplexer (DEMUX) circuit using a hierarchical approach, building it entirely from pre-existing 1x2 demultiplexer standard cells.
+
+---
+
+**Description:**
+
+A 1x8 demultiplexer is a **combinational logic circuit** with one data input ($D$), three select lines ($S_0$, $S_1$, $S_2$), and eight outputs ($Y_0$ to $Y_7$). Its purpose is to route the single data input to one of the eight outputs, as determined by the binary value of the select lines.
+
+The circuit is built by cascading **1x2 demultiplexer cells** in a tree structure. A 1x8 DEMUX requires a total of seven 1x2 DEMUX units arranged in three stages:
+
+* **Stage 1:** One 1x2 DEMUX with data input $D$ and select line $S_2$.
+* **Stage 2:** Two 1x2 DEMUX units, with their inputs connected to the outputs of the Stage 1 DEMUX. The select line for these is $S_1$.
+* **Stage 3:** Four 1x2 DEMUX units, with their inputs connected to the outputs of the Stage 2 DEMUXs. The select line for these is $S_0$.
+
+---
 
 **Design Steps:**
-- **Hierarchical Schematic:** Instantiate and connect seven `DEMUX1X2` cells in a tree structure.
-- **Schematic Capture:** Connect the data input `D` and select lines `S0`, `S1`, and `S2` to the appropriate inputs of the `DEMUX1X2` cells.
-- **Layout:** The layout is created by placing the seven `DEMUX1X2` layouts.
+
+1.  **Hierarchical Schematic Design:** The design is created by instantiating and connecting seven of the pre-built `DEMUX1X2` cells. The top-level schematic will show these cells in a clear, tree-like arrangement.
+
+2.  **Schematic Capture:** The data input $D$ is connected to the first stage `DEMUX1X2`'s data pin, and the select line $S_2$ is connected to its select pin. The two outputs of this first stage are routed to the data inputs of the two `DEMUX1X2` cells in the second stage. The select line for these two is $S_1$. The four outputs from the second stage feed the data inputs of the four `DEMUX1X2` cells in the final, third stage, which are controlled by select line $S_0$.
+
+3.  **Layout:** The layout is created by placing the seven `DEMUX1X2` layouts. The cells are arranged to follow the hierarchical tree structure for clean and efficient routing. The select lines ($S_0$, $S_1$, $S_2$) and the data input ($D$) are routed to minimize wire length and parasitic effects. The total transistor count is **35**.
+
+4.  **DRC/LVS:** Perform a **Design Rule Check (DRC)** to ensure the layout adheres to all manufacturing rules. Execute a **Layout Versus Schematic (LVS)** to verify that the physical layout accurately represents the hierarchical schematic.
+
+5.  **Simulation Setup:** In the Cadence **ADE L** environment, a **transient analysis** is configured. Pulsed voltage sources are applied to the data input $D$ and the three select lines $S_0$, $S_1$, and $S_2$. All 8 combinations of the select lines are tested to ensure full functionality.
+
+6.  **Simulation & Verification:** The simulation is run, and the output waveforms for $Y_0$ through $Y_7$ are observed. The output on the selected line should mirror the input data, while all other outputs remain low. This is compared against the demultiplexer's truth table.
+
+---
+
+**Schematic Diagram:**
+
+The schematic diagram clearly shows the cascading structure of the seven 1x2 DEMUX cells, with the select lines controlling each stage of the tree.
+
+![Inverter Schematic](Images/khalid_demux1x8_sc.png)
+
+---
+
+**Layout:**
+
+The layout visually represents the physical placement of the `DEMUX1X2` cells and the careful routing of signal and power lines to achieve a compact and functional design.
+
+![Inverter Schematic](Images/khalid_demux1x8_la.png)
+
+---
+
+**Symbol:**
+
+The symbol is a top-level representation of the 1x8 demultiplexer, showing its single data input, three select lines, and eight outputs.
+
+![Inverter Schematic](Images/khalid_demux1x8_sy.png)
+
+---
+
+**Simulation & Verification:**
+
+The simulation plot below shows the waveforms for the inputs and outputs, confirming that the circuit performs the correct demultiplexing function. The output goes high only on the line corresponding to the binary value of the select lines. For example, when $S_2 S_1 S_0 = 011$ (binary 3), the data is routed to output $Y_3$.
+
+| $S_2$ | $S_1$ | $S_0$ | $D$ | $Y_0$ | $Y_1$ | $Y_2$ | $Y_3$ | $Y_4$ | $Y_5$ | $Y_6$ | $Y_7$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 0 | 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+| 0 | 1 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 1 | 0 | 0 |
+| 1 | 1 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 0 |
+| 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
+
+The simulation confirms that the designed circuit successfully routes the data input to the selected output, validating its functionality for all eight possible input combinations.
+
+![Inverter Schematic](Images/khalid_demux1x8_sim.png)
