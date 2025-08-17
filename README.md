@@ -459,7 +459,7 @@ The simulation confirmed that the circuit performed the demultiplexing operation
 
 ---
 
-### 1x8 Demultiplexer Design
+### 1x8 De-Multiplexer
 
 **Objective:**
 
